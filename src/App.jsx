@@ -110,23 +110,7 @@ function App() {
                   </div>
                   <p>The ultimate SaaS solution for comprehensive school management and administration.</p>
               </div>
-              
-              <div className="footer-links">
-                  <h4>Product</h4>
-                  <ul>
-                      <li><a href="#features">Features</a></li>
-                      <li><a href="#security">Security</a></li>
-                  </ul>
-              </div>
-              
-              <div className="footer-links">
-                  <h4>Company</h4>
-                  <ul>
-                      <li><a href="#">About Us</a></li>
-                      <li><a href="#">Contact</a></li>
-                      <li><a href="#">Privacy Policy</a></li>
-                  </ul>
-              </div>
+
               
               <div className="footer-links">
                   <h4>Contact</h4>
