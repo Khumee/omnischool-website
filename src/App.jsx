@@ -135,8 +135,8 @@ function App() {
               <div className="footer-links">
                   <h4>Contact</h4>
                   <ul>
-                      <li><a href="mailto:sales@omnischoolapp.com">sales@omnischoolapp.com</a></li>
-                      <li><a href="#">[Insert Muhaimin Tech Address]</a></li>
+                      <li><a href="mailto:contact@muhaimintech.com">contact@muhaimintech.com</a></li>
+                      <li><a href="https://muhaimintech.com/" target="_blank" rel="noopener noreferrer">www.muhaimintech.com</a></li>
                       <li style={{ marginTop: '0.5rem', color: 'var(--primary-color)', fontWeight: 600 }}>A Product of Muhaimin Technologies</li>
                   </ul>
               </div>
