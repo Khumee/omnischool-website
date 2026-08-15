@@ -7,9 +7,9 @@ function App() {
 
       {/* Hero Section */}
       <section className="hero container">
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1.5rem', flexWrap: 'wrap', marginBottom: '1.5rem' }}>
-              <img src="/logo.png" alt="OmniSchool Logo" style={{ height: '80px', width: 'auto' }} />
-              <h1 style={{ marginBottom: 0 }}>Elevate Your Institution</h1>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', flexWrap: 'wrap', marginBottom: '1.5rem' }}>
+              <img src="/logo.png" alt="OmniSchool Logo" style={{ height: '140px', width: 'auto', margin: '-30px 0' }} />
+              <h1 style={{ marginBottom: 0, zIndex: 10 }}>Elevate Your Institution</h1>
           </div>
           <p>The premium, all-in-one cloud platform designed to give Principals, Administrators, and Teachers total control over their school.</p>
           
