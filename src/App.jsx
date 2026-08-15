@@ -3,21 +3,14 @@ import { useState } from 'react'
 function App() {
   return (
     <>
-      {/* Navbar */}
-      <nav className="navbar container">
-          <div className="nav-brand">
-              <img src="/logo.png" alt="OmniSchool Logo" className="nav-logo" />
-              <span>OmniSchool</span>
-          </div>
-          <div className="nav-links">
-              <a href="#features">Features</a>
-              <a href="#contact">Contact</a>
-          </div>
-      </nav>
+
 
       {/* Hero Section */}
       <section className="hero container">
-          <h1>Elevate Your Institution</h1>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1.5rem', flexWrap: 'wrap', marginBottom: '1.5rem' }}>
+              <img src="/logo.png" alt="OmniSchool Logo" style={{ height: '80px', width: 'auto' }} />
+              <h1 style={{ marginBottom: 0 }}>Elevate Your Institution</h1>
+          </div>
           <p>The premium, all-in-one cloud platform designed to give Principals, Administrators, and Teachers total control over their school.</p>
           
           <div className="hero-cta">
