@@ -11,10 +11,7 @@ function App() {
           </div>
           <div className="nav-links">
               <a href="#features">Features</a>
-              <a href="#pricing">Pricing</a>
               <a href="#contact">Contact</a>
-              <button className="btn btn-outline" style={{ padding: '0.5rem 1rem' }}>Log In</button>
-              <button className="btn btn-primary" style={{ padding: '0.5rem 1rem' }}>Get Started</button>
           </div>
       </nav>
 
@@ -117,9 +114,8 @@ function App() {
               <div className="footer-links">
                   <h4>Product</h4>
                   <ul>
-                      <li><a href="#">Features</a></li>
-                      <li><a href="#">Pricing</a></li>
-                      <li><a href="#">Security</a></li>
+                      <li><a href="#features">Features</a></li>
+                      <li><a href="#security">Security</a></li>
                   </ul>
               </div>
               
