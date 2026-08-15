@@ -25,7 +25,6 @@ function App() {
           
           <div className="hero-cta">
               <button className="btn btn-primary">Start Your Free Trial</button>
-              <button className="btn btn-outline"><i className="bi bi-play-circle"></i> Watch Demo</button>
           </div>
 
           <div className="hero-image">
