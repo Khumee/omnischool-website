@@ -21,7 +21,7 @@ function App() {
           <p>The premium, all-in-one cloud platform designed to give Principals, Administrators, and Teachers total control over their school.</p>
           
           <div className="hero-cta">
-              <button className="btn btn-primary">Start Your Free Trial</button>
+              <a href="mailto:contact@muhaimintech.com?subject=OmniSchool%20Free%20Trial%20Request" className="btn btn-primary">Start Your Free Trial</a>
           </div>
 
           <div className="hero-image" style={{ marginTop: '3rem', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.15)', border: '1px solid #e2e8f0' }}>
@@ -97,7 +97,7 @@ function App() {
       <section className="hero container" style={{ paddingTop: '2rem' }}>
           <h2>Ready to modernize your school?</h2>
           <p>Stop fighting your software. Let OmniSchool handle the administration so you can focus on education.</p>
-          <button className="btn btn-primary" style={{ marginTop: '1rem' }}>Contact Sales</button>
+          <a href="mailto:contact@muhaimintech.com?subject=OmniSchool%20Sales%20Inquiry" className="btn btn-primary" style={{ marginTop: '1rem', display: 'inline-block' }}>Contact Sales</a>
       </section>
 
       {/* Footer */}
