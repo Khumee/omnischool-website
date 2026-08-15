@@ -108,7 +108,7 @@ function App() {
                       <img src="/logo.png" alt="OmniSchool Logo" className="nav-logo" />
                       <span>OmniSchool</span>
                   </div>
-                  <p>A premium SaaS Cloud Platform designed specifically for educational institutions.</p>
+                  <p>The ultimate SaaS solution for comprehensive school management and administration.</p>
               </div>
               
               <div className="footer-links">
