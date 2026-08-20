@@ -15,7 +15,7 @@ function App() {
       </section>
 
       {/* Video Demo Section */}
-      <section className="features container" style={{ paddingTop: '1rem' }}>
+      <section className="features container" style={{ paddingTop: '1rem', paddingBottom: '2rem' }}>
           <div className="section-title">
               <h2>A Glimpse of OmniSchool</h2>
               <p>A complete walkthrough of the dashboard, student and fee management, payroll, and the dedicated Hifz module.</p>
@@ -26,13 +26,13 @@ function App() {
                   Your browser does not support the video tag.
               </video>
           </div>
-          <div className="hero-cta" style={{ marginTop: '2rem' }}>
+          <div className="hero-cta" style={{ marginTop: '2rem', marginBottom: 0 }}>
               <a href="mailto:contact@muhaimintech.com?subject=OmniSchool%20Free%20Trial%20Request" className="btn btn-primary">Start Your Free Trial</a>
           </div>
       </section>
 
       {/* Features Section */}
-      <section id="features" className="features container">
+      <section id="features" className="features container" style={{ paddingTop: '2rem' }}>
           <div className="section-title">
               <h2>Powerful Core Modules</h2>
               <p>Everything you need to run a modern educational institution, all in one place.</p>
