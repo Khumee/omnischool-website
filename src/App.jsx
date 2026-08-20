@@ -6,18 +6,18 @@ function App() {
 
 
       {/* Hero Section */}
-      <section className="hero container">
+      <section className="hero container" style={{ paddingBottom: '1rem' }}>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1.5rem', flexWrap: 'wrap', marginBottom: '1.5rem' }}>
               <img src="/logo.png" alt="OmniSchool Logo" style={{ height: '100px', width: 'auto' }} />
               <h1 style={{ marginBottom: 0, zIndex: 10 }}>Elevate Your Institution</h1>
           </div>
-          <p>The premium, all-in-one cloud platform designed to give Principals, Administrators, and Teachers total control over their school.</p>
+          <p style={{ marginBottom: 0 }}>The premium, all-in-one cloud platform designed to give Principals, Administrators, and Teachers total control over their school.</p>
       </section>
 
       {/* Video Demo Section */}
-      <section className="features container" style={{ paddingTop: '2rem' }}>
+      <section className="features container" style={{ paddingTop: '1rem' }}>
           <div className="section-title">
-              <h2>See Everything OmniSchool Can Do</h2>
+              <h2>A Glimpse of OmniSchool</h2>
               <p>A complete walkthrough of the dashboard, student and fee management, payroll, and the dedicated Hifz module.</p>
           </div>
           <div className="hero-image" style={{ maxWidth: '900px' }}>
