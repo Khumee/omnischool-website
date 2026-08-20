@@ -1,6 +1,22 @@
-import { useState } from 'react'
+import { useRef } from 'react'
 
 function App() {
+  const videoRef = useRef(null)
+
+  const handleVideoPlay = () => {
+    const video = videoRef.current
+    if (!video) return
+
+    if (video.requestFullscreen) {
+      video.requestFullscreen().catch(() => {})
+    } else if (video.webkitRequestFullscreen) {
+      video.webkitRequestFullscreen()
+    } else if (video.webkitEnterFullscreen) {
+      // iOS Safari
+      video.webkitEnterFullscreen()
+    }
+  }
+
   return (
     <>
 
@@ -21,7 +37,7 @@ function App() {
               <p>A complete walkthrough of the dashboard, student and fee management, payroll, and the dedicated Hifz module.</p>
           </div>
           <div className="hero-image" style={{ maxWidth: '900px' }}>
-              <video controls preload="metadata" poster="/screenshots/Dashboard-1.png" style={{ width: '100%', display: 'block' }}>
+              <video ref={videoRef} onPlay={handleVideoPlay} controls preload="metadata" poster="/screenshots/Dashboard-1.png" style={{ width: '100%', display: 'block' }}>
                   <source src="/videos/demo-english.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
               </video>
