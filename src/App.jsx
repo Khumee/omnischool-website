@@ -22,6 +22,20 @@ function App() {
           </div>
       </section>
 
+      {/* Video Demo Section */}
+      <section className="features container" style={{ paddingTop: '2rem' }}>
+          <div className="section-title">
+              <h2>Watch OmniSchool In Action</h2>
+              <p>A complete walkthrough of the dashboard, student and fee management, payroll, and the dedicated Hifz module.</p>
+          </div>
+          <div className="hero-image" style={{ maxWidth: '900px' }}>
+              <video controls preload="metadata" poster="/screenshots/Dashboard-1.png" style={{ width: '100%', display: 'block' }}>
+                  <source src="/videos/demo-english.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+              </video>
+          </div>
+      </section>
+
       {/* Features Section */}
       <section id="features" className="features container">
           <div className="section-title">

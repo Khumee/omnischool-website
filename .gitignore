@@ -17,6 +17,10 @@ dist-ssr
 !.vscode/extensions.json
 .idea
 .DS_Store
+
+# Raw demo-video production assets (source script, TTS samples, unoptimized exports).
+# The web-optimized copy actually used by the site lives in public/videos/.
+/demo-video/
 *.suo
 *.ntvs*
 *.njsproj
