@@ -16,10 +16,6 @@ function App() {
           <div className="hero-cta">
               <a href="mailto:contact@muhaimintech.com?subject=OmniSchool%20Free%20Trial%20Request" className="btn btn-primary">Start Your Free Trial</a>
           </div>
-
-          <div className="hero-image" style={{ marginTop: '3rem', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.15)', border: '1px solid #e2e8f0' }}>
-              <img src="/screenshots/Dashboard-1.png" alt="OmniSchool Dashboard Preview" style={{ width: '100%', display: 'block' }} />
-          </div>
       </section>
 
       {/* Video Demo Section */}
