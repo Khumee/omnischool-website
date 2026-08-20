@@ -82,24 +82,6 @@ function App() {
           </div>
       </section>
 
-      {/* Interface Showcase */}
-      <section className="features container" style={{ paddingTop: '2rem' }}>
-          <div className="section-title">
-              <h2>Beautiful & Intuitive Interface</h2>
-              <p>See OmniSchool in action. Designed for speed, clarity, and ease of use.</p>
-          </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', marginTop: '2rem' }}>
-              {["Dashboard-1.png", "Student-List.png", "Fee-Monthly-Ledger.png", "Employee-Attendence.png", "Hifz-Progress.png", "Expense-ledger.png"].map((img, i) => (
-                  <div key={i} style={{ borderRadius: '12px', overflow: 'hidden', boxShadow: '0 10px 25px rgba(0,0,0,0.1)', border: '1px solid #e2e8f0' }}>
-                      <img src={`/screenshots/${img}`} alt={img.split('.')[0].replace(/-/g, ' ')} style={{ width: '100%', display: 'block', objectFit: 'cover' }} />
-                      <div style={{ padding: '1rem', backgroundColor: 'white', textAlign: 'center', fontWeight: '600', color: '#1e293b' }}>
-                          {img.split('.')[0].replace(/-/g, ' ')}
-                      </div>
-                  </div>
-              ))}
-          </div>
-      </section>
-
       {/* Call to Action */}
       <section className="hero container" style={{ paddingTop: '2rem' }}>
           <h2>Ready to modernize your school?</h2>
