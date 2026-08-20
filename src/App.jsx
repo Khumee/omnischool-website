@@ -12,16 +12,12 @@ function App() {
               <h1 style={{ marginBottom: 0, zIndex: 10 }}>Elevate Your Institution</h1>
           </div>
           <p>The premium, all-in-one cloud platform designed to give Principals, Administrators, and Teachers total control over their school.</p>
-          
-          <div className="hero-cta">
-              <a href="mailto:contact@muhaimintech.com?subject=OmniSchool%20Free%20Trial%20Request" className="btn btn-primary">Start Your Free Trial</a>
-          </div>
       </section>
 
       {/* Video Demo Section */}
       <section className="features container" style={{ paddingTop: '2rem' }}>
           <div className="section-title">
-              <h2>Watch OmniSchool In Action</h2>
+              <h2>See Everything OmniSchool Can Do</h2>
               <p>A complete walkthrough of the dashboard, student and fee management, payroll, and the dedicated Hifz module.</p>
           </div>
           <div className="hero-image" style={{ maxWidth: '900px' }}>
@@ -29,6 +25,9 @@ function App() {
                   <source src="/videos/demo-english.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
               </video>
+          </div>
+          <div className="hero-cta" style={{ marginTop: '2rem' }}>
+              <a href="mailto:contact@muhaimintech.com?subject=OmniSchool%20Free%20Trial%20Request" className="btn btn-primary">Start Your Free Trial</a>
           </div>
       </section>
 
