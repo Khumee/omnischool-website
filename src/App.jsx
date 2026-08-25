@@ -2,9 +2,9 @@ import { useRef } from 'react'
 
 function App() {
   const videoRef = useRef(null)
+  const hifzVideoRef = useRef(null)
 
-  const handleVideoPlay = () => {
-    const video = videoRef.current
+  const playFullscreen = (video) => {
     if (!video) return
 
     if (video.requestFullscreen) {
@@ -16,6 +16,9 @@ function App() {
       video.webkitEnterFullscreen()
     }
   }
+
+  const handleVideoPlay = () => playFullscreen(videoRef.current)
+  const handleHifzVideoPlay = () => playFullscreen(hifzVideoRef.current)
 
   return (
     <>
@@ -38,12 +41,26 @@ function App() {
           </div>
           <div className="hero-image" style={{ maxWidth: '900px' }}>
               <video ref={videoRef} onPlay={handleVideoPlay} controls preload="metadata" poster="/screenshots/Dashboard-1.png" style={{ width: '100%', display: 'block' }}>
-                  <source src="/videos/demo-english.mp4" type="video/mp4" />
+                  <source src="/video/demo-en.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
               </video>
           </div>
           <div className="hero-cta" style={{ marginTop: '2rem', marginBottom: 0 }}>
               <a href="mailto:contact@muhaimintech.com?subject=OmniSchool%20Free%20Trial%20Request" className="btn btn-primary">Start Your Free Trial</a>
+          </div>
+      </section>
+
+      {/* Hifz Module Video Section */}
+      <section className="features container" style={{ paddingTop: '1rem', paddingBottom: '2rem' }}>
+          <div className="section-title">
+              <h2>The Dedicated Hifz Module</h2>
+              <p>See how OmniSchool tracks daily Sabaq, Hifz progress, and test results for your Huffaz students.</p>
+          </div>
+          <div className="hero-image" style={{ maxWidth: '900px' }}>
+              <video ref={hifzVideoRef} onPlay={handleHifzVideoPlay} controls preload="metadata" poster="/screenshots/Hifz-Progress.png" style={{ width: '100%', display: 'block' }}>
+                  <source src="/video/hifz-demo.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+              </video>
           </div>
       </section>
 
