@@ -3,145 +3,401 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OmniSchool Marketing Brochure</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <title>OmniSchool - The Complete Operating System for Modern Schools</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
+        :root {
+            --primary: #0284c7;
+            --primary-dark: #0369a1;
+            --navy: #0f172a;
+            --text-heading: #0f172a;
+            --text-body: #334155;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --light-bg: #f8fafc;
+            --success: #16a34a;
+        }
+
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
             background: #ffffff;
-            color: #1e293b;
+            color: var(--text-body);
+            line-height: 1.5;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
         }
+
         .page {
-            width: 210mm;
-            min-height: 297mm;
-            padding: 20mm;
-            margin: 10mm auto;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 36px 32px;
             background: white;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            box-sizing: border-box;
         }
-        .header {
+
+        /* Top Header */
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #0284c7;
+            padding-bottom: 16px;
+            margin-bottom: 24px;
+        }
+
+        .brand-logo {
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            border-bottom: 2px solid #06b6d4;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
+            gap: 12px;
         }
-        .header img {
-            height: 60px;
+
+        .brand-logo img {
+            height: 48px;
+            width: auto;
+            object-fit: contain;
         }
-        .header-text {
+
+        .brand-info {
             text-align: right;
-            font-size: 14px;
-            color: #64748b;
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.4;
         }
+
+        .brand-info strong {
+            color: var(--navy);
+            font-size: 14px;
+        }
+
+        /* Hero Pitch */
         .hero {
-            text-align: center;
-            margin: 40px 0;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 60%, #0369a1 100%);
+            color: white;
+            border-radius: 16px;
+            padding: 32px 28px;
+            margin-bottom: 28px;
         }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(56, 189, 248, 0.18);
+            border: 1px solid rgba(56, 189, 248, 0.4);
+            color: #38bdf8;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+
         .hero h1 {
-            font-size: 36px;
+            font-size: 28px;
             font-weight: 800;
-            color: #0f172a;
+            line-height: 1.25;
             margin-bottom: 10px;
+            color: #ffffff;
         }
+
         .hero p {
-            font-size: 18px;
-            color: #334155;
-            max-width: 600px;
-            margin: 0 auto;
+            font-size: 15px;
+            color: #cbd5e1;
+            max-width: 680px;
+            line-height: 1.5;
         }
-        .features {
+
+        /* Value Pillars Grid (Core School Features) */
+        .section-header {
+            margin-bottom: 16px;
+        }
+
+        .section-header h2 {
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--text-heading);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .section-header h2::before {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 20px;
+            background: var(--primary);
+            border-radius: 3px;
+        }
+
+        .feature-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin-top: 40px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-bottom: 24px;
         }
-        .feature-item {
+
+        .feature-card {
             background: #f8fafc;
-            padding: 15px;
-            border-radius: 8px;
-            border-left: 4px solid #06b6d4;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 18px;
+            position: relative;
         }
-        .feature-item h3 {
-            margin: 0 0 5px 0;
-            color: #0f172a;
+
+        .feature-card.highlight {
+            background: #f0fdf4;
+            border-color: #bbf7d0;
+            border-left: 4px solid var(--success);
         }
-        .feature-item p {
-            margin: 0;
-            font-size: 14px;
-            color: #475569;
+
+        .feature-card:not(.highlight) {
+            border-left: 4px solid var(--primary);
         }
-        .footer {
-            margin-top: 60px;
+
+        .feature-tag {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+            color: var(--primary);
+        }
+
+        .feature-card.highlight .feature-tag {
+            color: var(--success);
+        }
+
+        .feature-card h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-heading);
+            margin-bottom: 6px;
+        }
+
+        .feature-card p {
+            font-size: 13px;
+            color: var(--text-body);
+            line-height: 1.45;
+        }
+
+        /* 3-Column Highlight Banner */
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            background: #f1f5f9;
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin-bottom: 28px;
             text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid #cbd5e1;
-            font-size: 14px;
-            color: #64748b;
         }
-        .footer strong {
-            color: #0f172a;
+
+        .stat-item h4 {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--navy);
+            margin-bottom: 2px;
         }
+
+        .stat-item p {
+            font-size: 12px;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        /* Onboarding Guarantee Banner */
+        .onboarding-banner {
+            background: #eff6ff;
+            border: 1px dashed #3b82f6;
+            border-radius: 12px;
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 28px;
+        }
+
+        .onboarding-icon {
+            font-size: 28px;
+            flex-shrink: 0;
+        }
+
+        .onboarding-text h4 {
+            font-size: 15px;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 2px;
+        }
+
+        .onboarding-text p {
+            font-size: 12.5px;
+            color: #3b82f6;
+        }
+
+        /* Footer */
+        .footer {
+            border-top: 1px solid var(--border);
+            padding-top: 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .footer-left h4 {
+            font-size: 15px;
+            font-weight: 800;
+            color: var(--text-heading);
+            margin-bottom: 2px;
+        }
+
+        .footer-left p {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .footer-right {
+            display: flex;
+            gap: 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .contact-chip {
+            background: #f1f5f9;
+            padding: 6px 14px;
+            border-radius: 20px;
+            color: var(--navy);
+            border: 1px solid var(--border);
+        }
+
         @media print {
-            body { background: none; }
-            .page { margin: 0; box-shadow: none; width: 100%; height: 100%; padding: 15mm; }
+            body { background: white; }
+            .page { padding: 10mm 15mm; max-width: 100%; }
+            .hero { padding: 24px; }
+            .feature-card { break-inside: avoid; }
         }
     </style>
 </head>
 <body>
-    <div class="page">
-        <div class="header">
-            <img src="/logo.png" alt="OmniSchool Logo">
-            <div class="header-text">
-                <strong>Muhaimin Technologies</strong><br>
-                www.muhaimintech.com
-            </div>
-        </div>
 
-        <div class="hero">
-            <h1>Elevate Your Institution</h1>
-            <p>The ultimate SaaS solution for comprehensive school management and administration.</p>
-        </div>
+<div class="page">
 
-        <div class="features">
-            <div class="feature-item">
-                <h3>Student Management</h3>
-                <p>Say goodbye to messy spreadsheets. Track enrollments, academic progress, and complete student histories with a single click.</p>
-            </div>
-            <div class="feature-item">
-                <h3>Automated Ledger</h3>
-                <p>Generate monthly fee vouchers instantly. Track incoming fees against overhead expenses and payroll to see your true bottom line.</p>
-            </div>
-            <div class="feature-item">
-                <h3>Unified Attendance</h3>
-                <p>Track both Student and Employee attendance in one place. Identify chronic absenteeism immediately with real-time analytics.</p>
-            </div>
-            <div class="feature-item">
-                <h3>Dedicated Hifz Diary</h3>
-                <p>The only modern SaaS platform featuring a built-in Hifz module. Track daily Sabaq, generate reports, and run test tracking.</p>
-            </div>
-            <div class="feature-item">
-                <h3>Donation Matrix</h3>
-                <p>Seamlessly manage donor contributions, run targeted campaigns, and generate professional receipts effortlessly.</p>
-            </div>
-            <div class="feature-item">
-                <h3>Enterprise Security</h3>
-                <p>Role-based access control ensures that teachers only see what they need to, while admins maintain total oversight.</p>
-            </div>
+    <!-- Top Header with Logo -->
+    <div class="top-bar">
+        <div class="brand-logo">
+            <img src="./logo.png" alt="OmniSchool Logo">
         </div>
-
-        <div class="hero" style="margin-top: 50px;">
-            <img src="/screenshots/Dashboard-1.png" alt="Dashboard Preview" style="width: 100%; max-width: 500px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-        </div>
-
-        <div class="footer">
-            <p>Ready to modernize your school? Stop fighting your software. Let OmniSchool handle the administration.</p>
-            <p><strong>Contact Sales:</strong> contact@muhaimintech.com</p>
+        <div class="brand-info">
+            <strong>OmniSchool Operating System</strong><br>
+            www.omnischoolapp.com
         </div>
     </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-badge">School Management Platform</div>
+        <h1>Take Total Control of Your School's Finances & Administration</h1>
+        <p>Eliminate paper registers, manual receipt books, and accounting blind spots. OmniSchool gives principals and accountants real-time financial clarity, 1-click batch challans, and effortless exam reporting.</p>
+    </div>
+
+    <!-- Stats / Value Bar -->
+    <div class="stats-bar">
+        <div class="stat-item">
+            <h4>1 Click</h4>
+            <p>Batch Fee Challans for Full Class</p>
+        </div>
+        <div class="stat-item">
+            <h4>100% Clarity</h4>
+            <p>Real-Time Net Income vs Expenses</p>
+        </div>
+        <div class="stat-item">
+            <h4>24 Hours</h4>
+            <p>Free Complete Data Onboarding</p>
+        </div>
+    </div>
+
+    <!-- Core Features Grid -->
+    <div class="section-header">
+        <h2>Core Modules Built For Every School</h2>
+    </div>
+
+    <div class="feature-grid">
+        <!-- 1. Fees & Ledgers -->
+        <div class="feature-card highlight">
+            <div class="feature-tag">Fee Management & Ledger</div>
+            <h3>1-Click Fee Challans & Defaulters Audit</h3>
+            <p>Print customized, multi-copy fee vouchers for an entire class in seconds. Track unpaid fee defaulters, overdue balances, and late fee fines automatically.</p>
+        </div>
+
+        <!-- 2. Expenses & Net Profit -->
+        <div class="feature-card highlight">
+            <div class="feature-tag">Financial Clarity</div>
+            <h3>Expense Ledger & Net Income Tracking</h3>
+            <p>Log school expenses, utility bills, maintenance, and staff payroll. Compare incoming fee revenue against overhead to see your true monthly profit/loss.</p>
+        </div>
+
+        <!-- 3. Concessions & Discounts -->
+        <div class="feature-card">
+            <div class="feature-tag">Revenue Protection</div>
+            <h3>Concession & Discount Control</h3>
+            <p>Full audit trail of all student fee concessions, sibling discounts, and scholarships. Prevent unauthorized revenue leakage with transparent reporting.</p>
+        </div>
+
+        <!-- 4. Exams & Report Cards -->
+        <div class="feature-card">
+            <div class="feature-tag">Academics & Grading</div>
+            <h3>Exams, Marks & Printable Report Cards</h3>
+            <p>Define terms, subjects, and grading criteria. Teachers enter marks easily, and the system instantly generates beautiful printable student report cards.</p>
+        </div>
+
+        <!-- 5. Attendance & Registers -->
+        <div class="feature-card">
+            <div class="feature-tag">Daily Attendance</div>
+            <h3>Student & Staff Attendance Tracking</h3>
+            <p>Mark daily attendance in under a minute. Identify chronic absenteeism and view monthly attendance percentages for students and faculty.</p>
+        </div>
+
+        <!-- 6. Executive Dashboard -->
+        <div class="feature-card">
+            <div class="feature-tag">Principal Oversight</div>
+            <h3>Executive Dashboard & Analytics</h3>
+            <p>A single bird's-eye view for the Principal or Director. Check today's fee collections, total enrollment, pending dues, and active staff from any device.</p>
+        </div>
+    </div>
+
+    <!-- Free Onboarding Guarantee -->
+    <div class="onboarding-banner">
+        <div class="onboarding-icon">🚀</div>
+        <div class="onboarding-text">
+            <h4>100% Free White-Glove Data Migration</h4>
+            <p>Don't worry about manual data entry. Simply provide your existing student list on Excel or paper register photos—our technical team will format and upload all your records within 24 hours at no extra charge.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-left">
+            <h4>Ready to modernize your school?</h4>
+            <p>Schedule a live 10-minute demo on your premises or online.</p>
+        </div>
+        <div class="footer-right">
+            <div class="contact-chip">🌐 omnischoolapp.com</div>
+            <div class="contact-chip">📧 contact@muhaimintech.com</div>
+            <div class="contact-chip">📱 Authorized Partner</div>
+        </div>
+    </div>
+
+</div>
+
 </body>
 </html>
